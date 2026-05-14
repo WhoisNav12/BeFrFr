@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BeFrFr</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="splash-screen" id="splash-screen">
+    <div class="splash-inner">
+      <h1 class="splash-logo">Be<span class="orange">FrFr</span></h1>
+      <p class="splash-tagline">The news, minus the nonsense.</p>
+    </div>
+  </div>
+
+  <div class="interests-overlay hidden" id="interests-overlay">
+    <div class="interests-box">
+      <h2>Pick your interests</h2>
+      <p>Choose a few topics you want to see in your feed.</p>
+
+      <div class="interest-options" id="interest-options">
+        <button class="interest-btn" data-topic="all">All</button>
+        <button class="interest-btn" data-topic="bahrain">Bahrain</button>
+        <button class="interest-btn" data-topic="iran">Iran</button>
+        <button class="interest-btn" data-topic="world">World</button>
+        <button class="interest-btn" data-topic="usa">USA</button>
+        <button class="interest-btn" data-topic="gcc">GCC</button>
+        <button class="interest-btn" data-topic="business">Business</button>
+        <button class="interest-btn" data-topic="tech">Tech</button>
+        <button class="interest-btn" data-topic="health">Health</button>
+        <button class="interest-btn" data-topic="sports">Sports</button>
+        <button class="interest-btn" data-topic="other">Other</button>
+      </div>
+
+      <div class="interests-actions">
+        <button id="save-interests-btn">Show my news</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="app">
+    <header class="top-bar">
+      <div class="top-bar-row">
+        <div>
+          <h1 class="logo">Be<span class="orange">FrFr</span></h1>
+          <p class="tagline">The news, minus the nonsense.</p>
+        </div>
+
+        <button id="edit-interests-btn" class="edit-interests-btn" type="button">
+          <span class="edit-icon">✦</span>
+          <span class="edit-label">Edit interests</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="top-controls">
+<label class="language-toggle" aria-label="Toggle language">
+  <input type="checkbox" id="language-toggle-input" />
+  <span class="language-toggle-track">
+    <span class="language-option language-option-en">ENG</span>
+    <span class="language-option language-option-ar">ARB</span>
+    <span class="language-toggle-thumb"></span>
+  </span>
+</label>
+
+      <label class="theme-toggle" aria-label="Toggle theme">
+        <input type="checkbox" id="theme-toggle-input" />
+        <span class="theme-toggle-track">
+          <span class="theme-icon theme-icon-sun">☾</span>
+          <span class="theme-icon theme-icon-moon">☀</span>
+          <span class="theme-toggle-thumb"></span>
+        </span>
+      </label>
+    </div>
+
+    <section class="search-bar-wrap">
+      <form id="search-form" class="search-bar">
+        <div class="search-input-wrap">
+          <span class="search-icon">⌕</span>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search news..."
+            autocomplete="off"
+          />
+          <button
+            type="button"
+            id="clear-search-btn"
+            class="clear-search-btn"
+            aria-label="Clear search"
+            title="Clear"
+          >
+            ×
+          </button>
+        </div>
+
+        <!--<button type="submit" id="search-btn" class="search-submit-btn">Search</button>>-->
+      </form>
+    </section>
+
+    <section class="categories" id="categories">
+      <!-- Dynamic category buttons -->
+    </section>
+
+    <section id="news-feed" class="news-feed">
+      <!-- News cards will appear here -->
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
